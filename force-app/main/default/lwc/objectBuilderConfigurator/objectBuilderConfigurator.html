@@ -1,0 +1,59 @@
+<!-- Object Builder Configurator -->
+<template>
+
+	<div class="slds-p-horizontal_medium">
+
+		<!-- @formatter:off -->
+		<p class="slds-m-vertical_small">The purpose of this filter is to combine source fields together to create a single value that is itself an object (a.k.a. map) of key-value pairs. This is useful when a target schema is expecting a complex result, for example a shipping address.</p>
+		<p class="slds-m-vertical_small">Below you will define how this object is constructed, and also where to put it. Come up with a unique name that won't conflict with the names of existing source fields.</p>
+		<!-- @formatter:on -->
+
+		<lightning-input class="slds-size_1-of-4 slds-m-vertical_small"
+						 data-name="resultField"
+						 label="Result Field Name"
+						 value={configuration.resultName}
+						 onchange={checkNameConflict}
+						 onblur={updateResultField}
+						 placeholder="Resulting object writes here"></lightning-input>
+
+		<lightning-card title="Structure" class="slds-m-vertical_small">
+
+			<lightning-button label="Add Field" onclick={addField} slot="actions"></lightning-button>
+
+			<lightning-layout multiple-rows="true">
+				<template for:each={configuration.fields} for:item="field" for:index="index">
+
+					<lightning-layout-item key={field.fieldName} size="5" padding="around-small">
+						<lightning-combobox label="Source Field"
+											data-index={index}
+											value={field.flattened}
+											options={fieldList}
+											placeholder="Where does this value come from?"
+											onblur={updateSourcePath}></lightning-combobox>
+					</lightning-layout-item>
+
+					<lightning-layout-item key={field.fieldName} size="5" padding="around-small">
+						<lightning-input label="Field Name"
+										 data-index={index}
+										 value={field.fieldName}
+										 onblur={updateFieldName}
+										 placeholder="What shall we call it in the object?"></lightning-input>
+					</lightning-layout-item>
+
+					<lightning-layout-item key={field.fieldName} size="2" padding="around-small">
+						<div class="slds-m-top_large">
+							<lightning-button-icon icon-name="utility:close"
+												   alternative-text="Remove this field"
+												   value={index}
+												   onclick={removeField}></lightning-button-icon>
+						</div>
+					</lightning-layout-item>
+
+				</template>
+			</lightning-layout>
+
+		</lightning-card>
+
+	</div>
+
+</template>

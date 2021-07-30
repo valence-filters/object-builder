@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Object Builder</label>
+    <protected>false</protected>
+    <values>
+        <field>ClassName__c</field>
+        <value xsi:type="xsd:string">ObjectBuilderFilter</value>
+    </values>
+    <values>
+        <field>DefaultSortOrder__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Default__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Description__c</field>
+        <value xsi:type="xsd:string">Enables you to construct a record source field that is itself a collection of other source fields.</value>
+    </values>
+    <values>
+        <field>Namespace__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>
