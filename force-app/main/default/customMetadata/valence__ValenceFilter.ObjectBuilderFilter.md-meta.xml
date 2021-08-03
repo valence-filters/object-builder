@@ -3,23 +3,23 @@
     <label>Object Builder</label>
     <protected>false</protected>
     <values>
-        <field>ClassName__c</field>
+        <field>valence__ClassName__c</field>
         <value xsi:type="xsd:string">ObjectBuilderFilter</value>
     </values>
     <values>
-        <field>DefaultSortOrder__c</field>
+        <field>valence__DefaultSortOrder__c</field>
         <value xsi:nil="true"/>
     </values>
     <values>
-        <field>Default__c</field>
+        <field>valence__Default__c</field>
         <value xsi:nil="true"/>
     </values>
     <values>
-        <field>Description__c</field>
+        <field>valence__Description__c</field>
         <value xsi:type="xsd:string">Enables you to construct a record source field that is itself a collection of other source fields.</value>
     </values>
     <values>
-        <field>Namespace__c</field>
+        <field>valence__Namespace__c</field>
         <value xsi:nil="true"/>
     </values>
 </CustomMetadata>
