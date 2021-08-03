@@ -2,7 +2,7 @@
  * Valence UI plugin that allows for a custom experience when configuring the ObjectBuilder Filter.
  */
 
-import ValenceUIConfigurator from 'c/calenceUIConfigurator';
+import ValenceUIConfigurator from 'c/valenceUIConfigurator';
 
 export default class ObjectBuilderConfigurator extends ValenceUIConfigurator {
 
