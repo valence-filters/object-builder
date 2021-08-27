@@ -3,6 +3,10 @@
     <label>Object Builder</label>
     <protected>false</protected>
     <values>
+        <field>valence__BeforeMappingOnly__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
         <field>valence__ClassName__c</field>
         <value xsi:type="xsd:string">ObjectBuilderFilter</value>
     </values>
